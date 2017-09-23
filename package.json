@@ -1,11 +1,11 @@
 {
     "name": "carrot-remover",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "description": "Removes the carrots from your package json",
-    "main": "index.js",
+    "main": "dist/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "compile": "babel --presets es2015,stage-0 -d lib/ src/",
+        "compile": "babel --presets es2015,stage-0 -d dist/ src/",
         "prepublish": "npm run compile"
     },
     "author": "Kevin Upton",
