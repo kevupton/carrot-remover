@@ -27,7 +27,7 @@ keys.forEach(dep => {
 });
 
 function writeToFile () {
-  writeFile('./package.json', JSON.stringify(npm, null, 4))
+  writeFile('./package.json', JSON.stringify(npm, null, 2))
     .then(() => {
       bar.tick();
       console.log('\nSuccessfully removed carrots...');
