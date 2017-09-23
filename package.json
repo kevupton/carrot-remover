@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "babel --presets es2015,stage-0 -d dist/ src/",
+    "compile": "babel --presets es2015,stage-0 -d lib/ src/",
     "prepublish": "npm run compile"
   },
   "author": "Kevin Upton",
@@ -22,6 +22,6 @@
     "write": "1.0.3"
   },
   "bin": {
-    "remove-carrots": "node dist/index.js"
+    "remove-carrots": "bin/remove-carrots.js"
   }
 }
