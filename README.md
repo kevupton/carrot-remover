@@ -1,5 +1,7 @@
 # Carrot Remover
 
+Forces all versions in your package json to be static. Removing `^` and `~`'s.
+
 ### Install:
 
 ```shell
