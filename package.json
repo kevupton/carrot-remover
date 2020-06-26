@@ -1,6 +1,6 @@
 {
   "name": "carrot-remover",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Removes the carrots from your package json",
   "main": "dist/index.js",
   "scripts": {
