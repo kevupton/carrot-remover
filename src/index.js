@@ -41,6 +41,8 @@ function writeToFile() {
     writeFile('./package.json', JSON.stringify(npm, null, 2))
         .then(() => {
             bar.tick();
-            console.log('\nSuccessfully removed carrots...');
+            cmd.get(isYarn ? 'yarn' : 'npm install', () => {
+                console.log('\nSuccessfully removed carrots...');
+            });
         });
 }
