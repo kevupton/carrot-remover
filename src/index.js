@@ -22,12 +22,13 @@ cmd.get((isYarn ? 'yarn' : 'npm') + ' list --depth 0', function (err, data, stde
             const pattern = new RegExp('[├└]─ ' + key + '@([0-9\\.-a-zA-Z_]+)', 'i');
             const matches = pattern.exec(data);
 
-            if (!matches) {
-                console.warn('Could not find', key);
-                return;
+            if (matches) {
+                npm[dep][key] = matches[1].trim();
+            }
+            else {
+                console.warn(matches, 'Could not find', key);
             }
 
-            npm[dep][key] = matches[1].trim();
             completed++;
 
             bar.tick();
