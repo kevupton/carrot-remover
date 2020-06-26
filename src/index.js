@@ -19,7 +19,7 @@ cmd.get((isYarn ? 'yarn' : 'npm') + ' list --depth 0', function (err, data, stde
 
         Object.keys(npm[dep]).sort().forEach(key => {
 
-            const pattern = new RegExp('[├└]─ ' + key + '@([0-9\\.]+)');
+            const pattern = new RegExp('[├└]─ ' + key + '@([0-9\\.-a-zA-Z_]+)', 'i');
             const matches = pattern.exec(data);
 
             if (!matches) {
